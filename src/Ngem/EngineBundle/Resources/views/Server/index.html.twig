@@ -1,0 +1,72 @@
+{% extends 'NgemEngineBundle::layout.html.twig' %}
+
+{% block title %}NGEM :: {{ name }}{% endblock %}
+
+{% block content %}
+
+        <section id="featured" style="height: 120px;">
+          <h2 class="ftheading">Featured</h2>
+          <div class="ftwrap" style="padding-top: 0px;">
+            <div class="fttxt" style="margin-left: 0px;">
+              <h3>{{ name }}</h3>
+              <p>
+                <table>
+                  <tr><th align="left">Host</th><td>localhost</td></tr>
+                  <tr><th align="left">Type</th><td>MySQL</td></tr>
+                  <tr><th align="left">Schemas</th><td>32</td></tr>
+                </table>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div id="leftcontainer">
+{#
+          <h2 class="mainheading">Schemas</h2>
+
+          <article class="post">
+            <a href="{{name}}/unet_emma_dev">
+              <header><h3>unet_emma_dev <span style="float: right">(200)</span></h3> </header>
+            </a>
+          </article>
+
+          <article class="post">
+            <a href="{{name}}/unet_emma_dev">
+              <header><h3>unet_emma <span style="float: right">(188)</span></h3></header>
+            </a>
+          </article>
+
+          <div class="wp-pagenavi">
+            <span class="current">1</span>
+            <a href="/page/2/" title="2">2</a>
+            <a href="/page/3/" title="3">3</a>
+            <a href="/page/4/" title="4">4</a>
+            <a href="/page/5/" title="5">5</a>
+            <a href="/page/6/" title="6">6</a>
+            <a href="/page/7/" title="7">7</a>
+            <a href="/page/8/" title="8">8</a>
+            <a href="/page/2/">Next &raquo;</a>
+            <span class="extend">...</span>
+            <a href="/page/27/" title="Last (27) &raquo;">Last (27) &raquo;</a>
+          </div>
+          <div class="clear"></div>
+#}
+        </div>
+
+{% endblock %}
+
+{% block sidebar %}
+      <div id="sidebarwrap">
+        <h2>Schemas</h2>
+        <ul>
+          <li><a href="#"><strong>unet_emma_dev</strong></a>188</li>
+          <li><a href="#"><strong>unet_emma</strong></a>200</li>
+        </ul>
+
+        <h2>Actions</h2>
+        <ul>
+          <li><a href="#">Edit privileges</a></li>
+        </ul>
+
+      </div>
+{% endblock %}

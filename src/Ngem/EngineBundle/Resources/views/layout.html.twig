@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>{% block title %}NGEM{% endblock %}</title>
+<link href="{{ asset('bundles/ngemengine/css/style.css') }}" rel="stylesheet" type="text/css">
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="{{ asset('bundles/ngemengine/js/belatedPNG.js') }}"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+<script src="{{ asset('bundles/ngemengine/js/jquery-1.4.min.js') }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ asset('bundles/ngemengine/js/loopedslider.js') }}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#slider').loopedSlider({
+			autoStart: 6000,
+			restart: 5000
+		});
+
+	});
+</script>
+</head>
+
+<body>
+  <div id="bodywrap">
+    <section id="pagetop">
+      <p id="siteinfo">NGEM > Server > Scheme > Table > Field</p>
+      <nav id="sitenav">
+        <ul>
+          <li class="current"><a href="{{ path('_welcome') }}">Home</a></li>
+          <li><a href="{{ path('_query') }}">SQL Query</a></li>
+          <li><a href="{{ path('about') }}">About</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <header id="pageheader">
+      <h1>NGEM <span>Next-Gen Entity Manager</span></h1>
+    </header>
+
+    <div id="contents">
+      <section id="main">
+        {% block content %}{% endblock %}
+      </section>
+
+      <section id="sidebar">
+        {% block sidebar %}{% endblock %}
+      </section>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+
+  <footer id="pagefooter">
+    <div id="footerwrap">
+      <div class="copyright">2011 &copy; NGEM</div>
+    </div>
+  </footer>
+</body>
+</html>

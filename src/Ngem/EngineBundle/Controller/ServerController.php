@@ -6,24 +6,25 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class DefaultController extends Controller
+class ServerController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/{name}")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction($name)
     {
-        return array();
+        return array('name' => $name);
     }
 
     /**
-     * @Route("/about", name="about")
+     * @Route("/query", name="_query")
      * @Template()
      */
-    public function aboutAction()
+    public function queryAction($name)
     {
-      return array();
+        return array('name' => $name);
     }
+
 
 }
