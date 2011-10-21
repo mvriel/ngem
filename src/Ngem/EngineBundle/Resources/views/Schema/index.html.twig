@@ -1,6 +1,6 @@
 {% extends 'NgemEngineBundle::layout.html.twig' %}
 
-{% block title %}NGEM :: {{ server }}{% endblock %}
+{% block title %}NGEM :: {{ server }}.{{ schema }}{% endblock %}
 
 {% block content %}
 
@@ -8,12 +8,10 @@
           <h2 class="ftheading">Featured</h2>
           <div class="ftwrap" style="padding-top: 0px;">
             <div class="fttxt" style="margin-left: 0px;">
-              <h3>{{ server }}</h3>
+              <h3><a href="{{ path('_server', {'server': server}) }}">{{ server }}</a>.{{ schema }}</h3>
               <p>
                 <table>
-                  <tr><th align="left">Host</th><td>localhost</td></tr>
-                  <tr><th align="left">Type</th><td>MySQL</td></tr>
-                  <tr><th align="left">Schemas</th><td>32</td></tr>
+                  <tr><th align="left">Tables</th><td>32</td></tr>
                 </table>
               </p>
             </div>
@@ -21,17 +19,17 @@
         </section>
 
         <div id="leftcontainer">
-          <h2 class="mainheading">Schemas</h2>
+          <h2 class="mainheading">Tables</h2>
 
           <article class="post">
-            <a href="{{server}}/unet_emma_dev">
-              <header><h3>unet_emma_dev <span style="float: right">(200)</span></h3> </header>
+            <a href="{{server}}/{{schema}}/test">
+              <header><h3>test <span style="float: right">(200)</span></h3> </header>
             </a>
           </article>
 
           <article class="post">
-            <a href="{{server}}/unet_emma">
-              <header><h3>unet_emma <span style="float: right">(188)</span></h3></header>
+            <a href="{{server}}/{{schema}}/test2">
+              <header><h3>test2 <span style="float: right">(188)</span></h3></header>
             </a>
           </article>
 
@@ -59,13 +57,13 @@
       <div id="sidebarwrap">
         <h2>Actions</h2>
         <ul>
-          <li><a href="#">Create schema</a></li>
+          <li><a href="#">Edit privileges</a></li>
         </ul>
 
-        <h2>Servers</h2>
+        <h2>Schemas</h2>
         <ul>
-          <li><a href="uconnext_prod"><strong>uConnext: Productie</strong></a></li>
-          <li><a href="uconnext_dev"><strong>uConnext: Development</strong></a></li>
+          <li><a href="unet_emma_dev"><strong>unet_emma_dev</strong></a></li>
+          <li><a href="unet_emma"><strong>unet_emma</strong></a></li>
         </ul>
 
       </div>

@@ -9,21 +9,21 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class ServerController extends Controller
 {
     /**
-     * @Route("/{name}")
+     * @Route("/{server}", name="_server")
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction($server)
     {
-        return array('name' => $name);
+        return array('server' => $server);
     }
 
     /**
      * @Route("/query", name="_query")
      * @Template()
      */
-    public function queryAction($name)
+    public function queryAction()
     {
-        return array('name' => $name);
+        return array();
     }
 
 
