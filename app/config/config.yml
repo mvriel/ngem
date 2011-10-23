@@ -36,13 +36,13 @@ assetic:
 doctrine:
     dbal:
         driver:   %database_driver%
-        host:     %database_host%
-        port:     %database_port%
+        #host:     %database_host%
+        #port:     %database_port%
         dbname:   %database_name%
         user:     %database_user%
         password: %database_password%
         charset:  UTF8
-
+        path: /Users/jeroenlaan82/Sites/ngem/src/Ngem/EngineBundle/Resources/data/ngem
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true

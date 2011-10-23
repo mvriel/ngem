@@ -50,7 +50,9 @@
       </section>
 
       <section id="sidebar">
-        {% block sidebar %}{% endblock %}
+        {% block sidebar %}
+            {% render "NgemEngineBundle:Default:sidebar" %}
+        {% endblock %}
       </section>
 
       <div class="clear"></div>
